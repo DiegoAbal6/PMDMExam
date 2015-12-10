@@ -1,6 +1,7 @@
 package com.example.diego.examen;
 
 import android.app.Activity;
+import android.content.Context;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -79,11 +80,19 @@ public class DriverDetailFragment extends Fragment {
         mListener.cerrar();
 
     }
-
+    //Declaro mListener
     private MyFragmentListener mListener;
-
+    
     public interface MyFragmentListener{
         public void cerrar();
     }
+
+    public void onAttach(Context context){
+
+        super.onAttach(context);
+        mListener = (MyFragmentListener) context;
+
+    }
+
 
 }
