@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.diego.examen.dummy.DummyContent;
@@ -59,10 +60,16 @@ public class DriverDetailFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_driver_detail, container, false);
 
-        
+
         if (mItem != null) {
             ((TextView) rootView.findViewById(R.id.textView)).setText(mItem.id);
         }
+
+        //Método onClick
+        Button button = (Button) rootView.findViewById(R.id.button);
+        button.setOnClickListener((View.OnClickListener) this);
+
+
 
         return rootView;
     }
