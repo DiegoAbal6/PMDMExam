@@ -102,12 +102,25 @@ public class DriverListActivity extends AppCompatActivity
         }
     }
     //Método cerrar
-    @Override
+
     public void cerrar(){
 
         Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.driver_detail_container);
         getSupportFragmentManager().beginTransaction().remove(fragment).commit();
 
+
+
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+
+        super.onActivityResult(requestCode,resultCode,data);
+        switch (requestCode){
+            case 10:
+
+                break;
+
+        }
     }
 
 }

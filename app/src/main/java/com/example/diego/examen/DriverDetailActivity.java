@@ -79,4 +79,10 @@ public class DriverDetailActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+    //FINISH
+    public void cerrar(){
+
+        setResult(101);
+
+    }
 }
