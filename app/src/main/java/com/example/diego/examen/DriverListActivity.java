@@ -94,7 +94,7 @@ public class DriverListActivity extends AppCompatActivity
         } else {
             // In single-pane mode, simply start the detail activity
             // for the selected item ID.
-            
+
             Intent detailIntent = new Intent(this, DriverDetailActivity.class);
             detailIntent.putExtra(DriverDetailFragment.ARG_ITEM_ID, id);
             startActivityForResult(detailIntent, 100);
