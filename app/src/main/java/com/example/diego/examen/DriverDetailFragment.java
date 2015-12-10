@@ -59,9 +59,9 @@ public class DriverDetailFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_driver_detail, container, false);
 
-        // Show the dummy content as text in a TextView.
+        
         if (mItem != null) {
-            ((TextView) rootView.findViewById(R.id.driver_detail)).setText(mItem.details);
+            ((TextView) rootView.findViewById(R.id.textView)).setText(mItem.id);
         }
 
         return rootView;
