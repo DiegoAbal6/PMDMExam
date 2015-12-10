@@ -73,4 +73,15 @@ public class DriverDetailFragment extends Fragment {
 
         return rootView;
     }
+
+    public void onClick(View v) {
+
+        mListener.cerrar();
+
+    }
+
+    private MyFragmentListener mListener;
+
+    
+
 }
