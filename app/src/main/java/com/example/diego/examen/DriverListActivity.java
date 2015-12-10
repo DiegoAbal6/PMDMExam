@@ -1,5 +1,6 @@
 package com.example.diego.examen;
 
+import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -100,4 +101,13 @@ public class DriverListActivity extends AppCompatActivity
             startActivityForResult(detailIntent, 100);
         }
     }
+    //Método cerrar
+    @Override
+    public void cerrar(){
+
+        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.driver_detail_container);
+        getSupportFragmentManager().beginTransaction().remove(fragment).commit();
+
+    }
+
 }
