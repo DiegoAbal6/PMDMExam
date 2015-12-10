@@ -32,12 +32,16 @@ public class DriverListActivity extends AppCompatActivity
      * Whether or not the activity is in two-pane mode, i.e. running on a tablet
      * device.
      */
-    private boolean mTwoPane;
+
+    //La inicio en false
+    private boolean mTwoPane=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_driver_app_bar);
+
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -90,9 +94,10 @@ public class DriverListActivity extends AppCompatActivity
         } else {
             // In single-pane mode, simply start the detail activity
             // for the selected item ID.
+            
             Intent detailIntent = new Intent(this, DriverDetailActivity.class);
             detailIntent.putExtra(DriverDetailFragment.ARG_ITEM_ID, id);
-            startActivity(detailIntent);
+            startActivityForResult(detailIntent, 100);
         }
     }
 }
