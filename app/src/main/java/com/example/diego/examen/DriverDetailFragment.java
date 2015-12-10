@@ -82,6 +82,8 @@ public class DriverDetailFragment extends Fragment {
 
     private MyFragmentListener mListener;
 
-    
+    public interface MyFragmentListener{
+        public void cerrar();
+    }
 
 }
